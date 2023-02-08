@@ -2,7 +2,7 @@
 
 ![a 3d fretboard](https://kellycode.github.io/Fretboard-Practice/screen_shot.jpg)
 
-To help with learning the guitar fretboard.  Couldn't find a method I liked and this seems to work.
+To help with learning the guitar fretboard.  Couldn't find a method I liked and this seems to work.  Original idea was to make it a game but that was just distracting.
 
 The tuning notes on the left and the section bars on top are clickable and control which notes are displayed.
 These choices are cookie saved so they'll be there on the next visit.
