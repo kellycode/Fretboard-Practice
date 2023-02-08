@@ -1,5 +1,7 @@
 # Fretboard-Practice
 
+![a 3d fretboard](https://kellycode.github.io/Fretboard-Practice/screen_shot.jpg)
+
 To help with learning the guitar fretboard.  Couldn't find a method I liked and this seems to work.
 
 The tuning notes on the left and the section bars on top are clickable and control which notes are displayed.
