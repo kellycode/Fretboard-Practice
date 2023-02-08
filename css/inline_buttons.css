@@ -1,0 +1,112 @@
+
+/* 
+ * Note colors:
+ * https://en.wikipedia.org/wiki/Chromesthesia
+ * https://en.wikipedia.org/wiki/Solresol
+ * https://www.flutopedia.com/sound_color.htm
+ */
+
+#button_area {
+    width: 92%;
+    padding: 50px 0px;
+    z-index: 16;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#inline_buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.inline_button {
+    font-size: 42px;
+    width: 7%;
+    aspect-ratio : 1 / 1;
+    margin: 5px;
+    border: 4px outset;
+    border-radius: 25px;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    opacity: 0.6;
+}
+
+.inline_button:active {
+    transform: translateY(2px) translateX(2px);
+}
+
+.inline_button:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
+}
+
+#btnAi {
+    background-color: #990000;
+    border-color: #770000;
+}
+
+#btnAi:hover {
+    box-shadow: 3px 3px 10px #770000;
+}
+
+#btnBi {
+    background-color: #BB5500;
+    border-color: #993300;
+}
+
+#btnBi:hover {
+    box-shadow: 3px 3px 10px #993300;
+}
+
+#btnCi {
+    background-color: #CCCC00;
+    border-color: #AAAA00;
+}
+
+#btnCi:hover {
+    box-shadow: 3px 3px 10px #AAAA00;
+}
+
+#btnDi {
+    background-color: #00DD00;
+    border-color: #00CC00;
+}
+
+#btnDi:hover {
+    box-shadow: 3px 3px 10px #00CC00;
+}
+
+#btnEi {
+    background-color: #00AAAA;
+    border-color: #008888;
+}
+
+#btnEi:hover {
+    box-shadow: 3px 3px 10px #008888;
+}
+
+#btnFi {
+    background-color: #0077AA;
+    border-color: #004488;
+}
+
+#btnFi:hover {
+    box-shadow: 3px 3px 10px #004488;
+}
+
+#btnGi {
+    background-color: #990099;
+    border-color: #550055;
+}
+
+#btnGi:hover {
+    box-shadow: 3px 3px 10px #550055;
+}
+
+

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fret Wars</title>
+        <meta charset="UTF-8" />
+        <link rel="shortcut icon" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link href="css/sections.css" rel="stylesheet" type="text/css" />
+        <link href="css/inline_buttons.css" rel="stylesheet" type="text/css" />
+        <link href="css/site_styles.css" rel="stylesheet" type="text/css" />
+
+        <script src="js/jquery-3.6.3.min.js"></script>
+        <script src="js/CookieMgr.js"></script>
+        <script src="js/Exploder.js"></script>
+        <script src="js/Fret_Wars.js"></script>
+    </head>
+    <body>
+        <div id="app_container">
+            <div id="fretboard">
+                <div id="sections">
+                    <div id="section1" class="seeker section" data-seeker="sec1"></div>
+                    <div id="section2" class="seeker section" data-seeker="sec2"></div>
+                    <div id="section3" class="seeker section" data-seeker="sec3"></div>
+                </div>
+
+                <div id="tunings">
+                    <div id="tuningStr1" class="seeker tnote str1" data-seeker="str1">E</div>
+                    <div id="tuningStr2" class="seeker tnote str2" data-seeker="str2">B</div>
+                    <div id="tuningStr3" class="seeker tnote str3" data-seeker="str3">G</div>
+                    <div id="tuningStr4" class="seeker tnote str4" data-seeker="str4">D</div>
+                    <div id="tuningStr5" class="seeker tnote str5" data-seeker="str5">A</div>
+                    <div id="tuningStr6" class="seeker tnote str6" data-seeker="str6">E</div>
+                </div>
+                <div id="frets">
+                    <div class="fret fret01"></div>
+                    <div class="fret fret02"></div>
+                    <div class="fret fret03">
+                        <div class="dot dotPos"></div>
+                        <div class="smalldot">&#x2022;</div>
+                    </div>
+                    <div class="fret fret04"></div>
+                    <div class="fret fret05">
+                        <div class="dot dotPos"></div>
+                        <div class="smalldot">&#x2022;</div>
+                    </div>
+                    <div class="fret fret06"></div>
+                    <div class="fret fret07">
+                        <div class="dot dotPosUpper"></div>
+                        <div class="dot dotPosLower"></div>
+                        <div class="smalldot">&#x2022;</div>
+                    </div>
+                    <div class="fret fret08"></div>
+                    <div class="fret fret09">
+                        <div class="dot dotPos"></div>
+                        <div class="smalldot">&#x2022;</div>
+                    </div>
+                    <div class="fret fret10"></div>
+                    <div class="fret fret11"></div>
+                    <div class="fret fret12">
+                        <div class="dot dotPosUpper"></div>
+                        <div class="dot dotPosLower"></div>
+                        <div class="smalldot">&#x2022;&nbsp;&nbsp;&nbsp;&#x2022;</div>
+                    </div>
+                    <div class="fret fret13"></div>
+                    <div class="fret fret14"></div>
+                    <div class="fret fret15">
+                        <div class="dot dotPos"></div>
+                        <div class="smalldot">&#x2022;</div>
+                    </div>
+                    <div class="fret fret16"></div>
+                </div>
+
+                <div id="strings">
+                    <div id="string01" class="string"></div>
+                    <div id="string02" class="string"></div>
+                    <div id="string03" class="string"></div>
+                    <div id="string04" class="string"></div>
+                    <div id="string05" class="string"></div>
+                    <div id="string06" class="string"></div>
+                </div>
+
+                <div id="notes">
+                    <div class="fret fret01">
+                        <div class="note hidden sec1 str1"></div>
+                        <div class="note hidden sec1 str2"></div>
+                        <div class="note hidden sec1 str3"></div>
+                        <div class="note hidden sec1 str4"></div>
+                        <div class="note hidden sec1 str5"></div>
+                        <div class="note hidden sec1 str6"></div>
+                    </div>
+                    <div class="fret fret02">
+                        <div class="note hidden sec1 str1"></div>
+                        <div class="note hidden sec1 str2"></div>
+                        <div class="note hidden sec1 str3"></div>
+                        <div class="note hidden sec1 str4"></div>
+                        <div class="note hidden sec1 str5"></div>
+                        <div class="note hidden sec1 str6"></div>
+                    </div>
+                    <div class="fret fret03">
+                        <div class="note hidden sec1 str1"></div>
+                        <div class="note hidden sec1 str2"></div>
+                        <div class="note hidden sec1 str3"></div>
+                        <div class="note hidden sec1 str4"></div>
+                        <div class="note hidden sec1 str5"></div>
+                        <div class="note hidden sec1 str6"></div>
+                    </div>
+                    <div class="fret fret04">
+                        <div class="note hidden sec1 str1"></div>
+                        <div class="note hidden sec1 str2"></div>
+                        <div class="note hidden sec1 str3"></div>
+                        <div class="note hidden sec1 str4"></div>
+                        <div class="note hidden sec1 str5"></div>
+                        <div class="note hidden sec1 str6"></div>
+                    </div>
+                    <div class="fret fret05">
+                        <div class="note hidden sec1 str1"></div>
+                        <div class="note hidden sec1 str2"></div>
+                        <div class="note hidden sec1 str3"></div>
+                        <div class="note hidden sec1 str4"></div>
+                        <div class="note hidden sec1 str5"></div>
+                        <div class="note hidden sec1 str6"></div>
+                    </div>
+                    <div class="fret fret06">
+                        <div class="note hidden sec1 str1"></div>
+                        <div class="note hidden sec1 str2"></div>
+                        <div class="note hidden sec1 str3"></div>
+                        <div class="note hidden sec1 str4"></div>
+                        <div class="note hidden sec1 str5"></div>
+                        <div class="note hidden sec1 str6"></div>
+                    </div>
+                    <div class="fret fret07">
+                        <div class="note hidden sec2 str1"></div>
+                        <div class="note hidden sec2 str2"></div>
+                        <div class="note hidden sec2 str3"></div>
+                        <div class="note hidden sec2 str4"></div>
+                        <div class="note hidden sec2 str5"></div>
+                        <div class="note hidden sec2 str6"></div>
+                    </div>
+                    <div class="fret fret08">
+                        <div class="note hidden sec2 str1"></div>
+                        <div class="note hidden sec2 str2"></div>
+                        <div class="note hidden sec2 str3"></div>
+                        <div class="note hidden sec2 str4"></div>
+                        <div class="note hidden sec2 str5"></div>
+                        <div class="note hidden sec2 str6"></div>
+                    </div>
+                    <div class="fret fret09">
+                        <div class="note hidden sec2 str1"></div>
+                        <div class="note hidden sec2 str2"></div>
+                        <div class="note hidden sec2 str3"></div>
+                        <div class="note hidden sec2 str4"></div>
+                        <div class="note hidden sec2 str5"></div>
+                        <div class="note hidden sec2 str6"></div>
+                    </div>
+                    <div class="fret fret10">
+                        <div class="note hidden sec2 str1"></div>
+                        <div class="note hidden sec2 str2"></div>
+                        <div class="note hidden sec2 str3"></div>
+                        <div class="note hidden sec2 str4"></div>
+                        <div class="note hidden sec2 str5"></div>
+                        <div class="note hidden sec2 str6"></div>
+                    </div>
+                    <div class="fret fret11">
+                        <div class="note hidden sec2 str1"></div>
+                        <div class="note hidden sec2 str2"></div>
+                        <div class="note hidden sec2 str3"></div>
+                        <div class="note hidden sec2 str4"></div>
+                        <div class="note hidden sec2 str5"></div>
+                        <div class="note hidden sec2 str6"></div>
+                    </div>
+                    <div class="fret fret12">
+                        <div class="note hidden sec2 str1"></div>
+                        <div class="note hidden sec2 str2"></div>
+                        <div class="note hidden sec2 str3"></div>
+                        <div class="note hidden sec2 str4"></div>
+                        <div class="note hidden sec2 str5"></div>
+                        <div class="note hidden sec2 str6"></div>
+                    </div>
+                    <div class="fret fret13">
+                        <div class="note hidden sec3 str1"></div>
+                        <div class="note hidden sec3 str2"></div>
+                        <div class="note hidden sec3 str3"></div>
+                        <div class="note hidden sec3 str4"></div>
+                        <div class="note hidden sec3 str5"></div>
+                        <div class="note hidden sec3 str6"></div>
+                    </div>
+                    <div class="fret fret14">
+                        <div class="note hidden sec3 str1"></div>
+                        <div class="note hidden sec3 str2"></div>
+                        <div class="note hidden sec3 str3"></div>
+                        <div class="note hidden sec3 str4"></div>
+                        <div class="note hidden sec3 str5"></div>
+                        <div class="note hidden sec3 str6"></div>
+                    </div>
+                    <div class="fret fret15">
+                        <div class="note hidden sec3 str1"></div>
+                        <div class="note hidden sec3 str2"></div>
+                        <div class="note hidden sec3 str3"></div>
+                        <div class="note hidden sec3 str4"></div>
+                        <div class="note hidden sec3 str5"></div>
+                        <div class="note hidden sec3 str6"></div>
+                    </div>
+                    <div class="fret fret16">
+                        <div class="note hidden sec3 str1"></div>
+                        <div class="note hidden sec3 str2"></div>
+                        <div class="note hidden sec3 str3"></div>
+                        <div class="note hidden sec3 str4"></div>
+                        <div class="note hidden sec3 str5"></div>
+                        <div class="note hidden sec3 str6"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="button_area">
+                <div id="hideShow"></div>
+                <div id="inline_buttons">
+                    <button id="btnAi" class="inline_button" onclick="fw.checkNoteClick('A');">A</button>
+                    <button id="btnBi" class="inline_button" onclick="fw.checkNoteClick('B');">B</button>
+                    <button id="btnCi" class="inline_button" onclick="fw.checkNoteClick('C');">C</button>
+                    <button id="btnDi" class="inline_button" onclick="fw.checkNoteClick('D');">D</button>
+                    <button id="btnEi" class="inline_button" onclick="fw.checkNoteClick('E');">E</button>
+                    <button id="btnFi" class="inline_button" onclick="fw.checkNoteClick('F');">F</button>
+                    <button id="btnGi" class="inline_button" onclick="fw.checkNoteClick('G');">G</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let fw = new Fret_Wars();
+        </script>
+    </body>
+</html>

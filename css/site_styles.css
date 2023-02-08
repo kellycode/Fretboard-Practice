@@ -1,0 +1,442 @@
+html, body {
+    background-color: black;
+    height: 100%;
+    margin: 0px;
+}
+
+#app_container {
+    height: 100%;
+    width: 100%;
+    min-width: 1200px;
+    min-height: 800px;
+    background-color: black;
+
+    /*centering things inside*/
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/*tilted fretboard wasn't helpful*/
+.perspOuter {
+    perspective: 2000px;
+    perspective-origin: center;
+}
+
+.perspInner {
+    transform-style: preserve-3d;
+    transform: rotateX(0deg);
+}
+
+/*container for frets, strings and fingers*/
+#fretboard {
+    position: relative;
+    margin-top: 50px;
+    width: 88%;
+    aspect-ratio: 90/12;
+    box-shadow: 20px 20px 40px #222;
+}
+
+#tuning {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 40px;
+    z-index: 1;
+}
+
+#tunings {
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    top: 0px;
+    bottom: 0px;
+    left: -40px;
+    padding-top: 3px;
+    z-index: 2;
+    background-color: black;
+    border-radius: 10px;
+    border-right: 3px ridge beige;
+}
+
+#tunings.selected {
+    visibility: hidden;
+}
+
+#hideShow {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    padding: 4px;
+    box-sizing: border-box;
+    top: 20px;
+    left: 0px;
+    background: rgb(0,85,0);
+    background: radial-gradient(circle, rgba(0,85,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,85,0,1) 50%, rgba(0,0,0,1) 60%);
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+#hideShow:hover {
+    background: rgb(0,125,0);
+    background: radial-gradient(circle, rgba(0,125,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,65,0,1) 50%, rgba(0,0,0,1) 60%);
+}
+
+#hideShow.off {
+    background: rgb(125,0,0);
+    background: radial-gradient(circle, rgba(125,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(85,0,0,1) 55%, rgba(0,0,0,1) 60%);
+}
+
+#hideShow.off:hover {
+    background: radial-gradient(circle, rgba(165,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(105,0,0,1) 55%, rgba(0,0,0,1) 60%);
+}
+
+.tnote {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 50%;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: white;
+    opacity: 0.25;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: sans-serif;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tnote.selected {
+    background-color: #004d65;
+    border: 1px solid #717160;
+    opacity: 1.0;
+}
+
+.dot {
+    background-color: #aaaaaa;
+
+    opacity: 0.5;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dotPos {
+    top: 50%;
+}
+
+.dotPosUpper {
+    top: 25.5%;
+}
+
+.dotPosLower {
+    top: 74.5%;
+}
+
+.smalldot {
+    background-color: transparent;
+    color: #777;
+    width: 100%;
+    height: 10px;
+    line-height: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    text-align: center;
+    font-size: 24px;
+    cursor: default;
+    user-select: none;
+}
+
+/*div z-index layer #1 bottom*/
+#frets {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1;
+}
+
+/*individual fret rules*/
+.fret {
+    height: 100%;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/*fret border on the right*/
+#frets .fret {
+    border-right: 5px ridge #717160;
+}
+
+/*
+3.20675 is the scale length 320.675/100
+and calculates the fret width
+12 frets = 320.675
+16 frets = 386.830
+*/
+.fret01 {
+    width: calc(35.996% / 3.86830);
+}
+
+.fret02 {
+    width: calc(33.976% / 3.86830);
+}
+
+.fret03 {
+    width: calc(32.069% / 3.86830);
+}
+
+.fret04 {
+    width: calc(30.269% / 3.86830);
+}
+
+.fret05 {
+    width: calc(28.57% / 3.86830);
+}
+
+.fret06 {
+    width: calc(26.967% / 3.86830);
+}
+
+.fret07 {
+    width: calc(25.453% / 3.86830);
+}
+
+
+.fret08 {
+    width: calc(24.025% / 3.86830);
+}
+
+.fret09 {
+    width: calc(22.676% / 3.86830);
+}
+
+.fret10 {
+    width: calc(21.403% / 3.86830);
+}
+
+.fret11 {
+    width: calc(20.203% / 3.86830);
+}
+
+.fret12 {
+    width: calc(19.068% / 3.86830);
+}
+
+.fret13 {
+    width: calc(17.998% / 3.86830);
+}
+
+.fret14 {
+    width: calc(16.988% / 3.86830);
+}
+
+.fret15 {
+    width: calc(16.035% / 3.86830);
+}
+
+.fret16 {
+    width: calc(15.134% / 3.86830);
+}
+
+/*div z-index layer #2*/
+#strings {
+    position: absolute;
+    padding-top: 3px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: 2;
+}
+
+.string {
+    position: relative;
+    height: 16.6667%;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom-style: ridge;
+    border-bottom-color: #717160;
+}
+
+.string:nth-child(1) {
+    height: 8.3333%;
+    border-bottom-width: 2px;
+}
+
+.string:nth-child(2) {
+    border-bottom-width: 2px;
+}
+
+.string:nth-child(3) {
+    border-bottom-width: 3px;
+}
+
+.string:nth-child(4) {
+    border-bottom-width: 4px;
+}
+
+.string:nth-child(5) {
+    border-bottom-width: 5px;
+}
+
+.string:nth-child(6) {
+    border-bottom-width: 6px;
+}
+
+/*div z-index layer #3*/
+#notes {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: 3;
+}
+
+.note {
+    background: rgba(200, 200, 200, 1);
+    box-shadow: 0 0 0 0 rgba(200, 200, 200, 1);
+    animation: pulse-blue 1s infinite;
+    opacity: 1.0;
+
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+
+    left: 50%;
+    top: 50%;
+    margin-left: -14px;
+    margin-top: -14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: default;
+
+    color: transparent;
+
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+
+    user-select: none;
+}
+
+@keyframes pulse-blue {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(200, 200, 200, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(200, 200, 200, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(200, 200, 200, 0);
+    }
+}
+
+.note:hover {
+    color: black;
+}
+
+.note.incorrect {
+    background: red;
+    box-shadow: 0 0 0 0 red;
+    animation: blinker 0.7s linear;
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#notes:hover .note.natural {
+    visibility: visible;
+    color: black;
+}
+
+.note.hidden {
+    visibility: hidden;
+}
+
+.note.accidental {
+    visibility: hidden;
+}
+
+/*for finger position top*/
+.str1 {
+    top: 9.5%;
+}
+
+.str2 {
+    top: 25.0%;
+}
+
+.str3 {
+    top: 41.5%;
+}
+
+.str4 {
+    top: 57.5%;
+}
+
+.str5 {
+    top: 74.0%;
+}
+
+.str6 {
+    top: 90.0%;
+}
+
+#slider-vertical {
+    height: 200px;
+}
+
+.sec1, .sec2, .sec3 {
+
+}
+
+/*filler styles cause my IDE flags missing styles*/
+
+.tnote {
+
+}
+
+.seeker {
+
+}

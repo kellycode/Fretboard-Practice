@@ -1,0 +1,60 @@
+
+/*https://codepen.io/simurai/pen/kvyEeg*/
+
+#sections {
+    width: 100%;
+    height: 15px;
+    z-index: 16;
+    position: relative;
+    margin-left: 0px;
+    margin-top: -30px;
+    perspective: 0px;
+    user-select: none;
+}
+
+.section {
+    height: 100%;
+    box-sizing: border-box;
+    border-right: 3px ridge #717160;
+    border-left: 3px ridge #717160;
+    border-top: 3px ridge #717160;
+    border-radius: 6px;
+    display:inline-block;
+    cursor: pointer;
+    background-color: black;
+}
+
+.section:hover {
+    background-color: #333;
+}
+
+.section.selected {
+    border-bottom: 3px ridge #717160;
+    background-color: #004d65;
+}
+
+#section1 {
+    width: 48.2%;
+}
+
+#section2 {
+    width: 34.2%;
+}
+
+#section3 {
+    width: 17%;
+}
+
+.bracket {
+    font-weight: bold;
+    color: purple;
+    font-size: 30px;
+}
+
+.lefty {
+    float: left;
+}
+
+.righty {
+    float: right;
+}
