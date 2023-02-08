@@ -1,6 +1,6 @@
 
 
-class Fret_Wars {
+class Fretboard {
     constructor() {
         this.notes = ['A', 'Bb', 'B', 'C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B', 'C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B', 'C', 'Db', 'D'];
         this.fretNotes = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
