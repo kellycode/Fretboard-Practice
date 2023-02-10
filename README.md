@@ -13,4 +13,4 @@ String tunings on the left can be hidden to make note counting less tempting.
 
 String tunings are made to be easily altered at some point - the algorithm looks at these notes and lays out the string notes so changing the tunings is mostly already built in.
 
-Code is all plain ol' css, vanilla js and jquery.  Feel free to do whatever you want with it, no credit required or toss me a Gibson ES-335 if you're feeling flush or work in Amsterdam would be cool. 
+Code is all plain ol' css, vanilla js and jquery.  Feel free to do whatever you like with it.
