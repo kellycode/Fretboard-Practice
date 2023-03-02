@@ -4,6 +4,19 @@ html, body {
     margin: 0px;
 }
 
+#on_mobile_msg {
+    display: none;
+    height: 100px;
+    line-height: 100px;
+    width: 100%;
+    position: fixed;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 24px;
+    color: #AAA;
+}
+
 #app_container {
     height: 100%;
     width: 100%;
@@ -97,8 +110,8 @@ html, body {
 
 .tnote {
     position: absolute;
-    width: 28px;
-    height: 28px;
+    width: 22px;
+    height: 22px;
     left: 50%;
     border-radius: 50%;
     border: 1px solid black;
@@ -108,10 +121,11 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
     font-family: sans-serif;
     cursor: pointer;
     user-select: none;
+    font-size: 14px;
+    color: #999;
 }
 
 .tnote.selected {
