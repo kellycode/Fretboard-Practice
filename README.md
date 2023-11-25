@@ -2,7 +2,7 @@
 
 ![a 3d fretboard](https://kellycode.github.io/Fretboard-Practice/screen_shot.jpg)
 
-This was a good idea but I found it's far less helpful than just learning the notes on youe guitar one string at a time and parctice, practice, practice reading music.
+This was a good idea but I found it's far less helpful than just learning the notes on your guitar one string at a time and parctice, practice, practice reading music.
 
 To help with learning the guitar fretboard.  Couldn't find a method I liked and this seems to work.  Original idea was to make it a game but that was just distracting.
 
